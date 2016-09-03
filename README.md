@@ -11,5 +11,3 @@
 	-VirtualBox platform pacdages
 	-VirtualBox 5.14 Oracla VM VirtualBox Extension Pack
 *Atom 编辑器
-
-##注册虚拟机
