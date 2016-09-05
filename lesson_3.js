@@ -41,7 +41,7 @@ for (x in person)
 
 
 
-//toString()注意事项，对象可以是数组或者布尔值
+//toString() 注意事项，对象可以是数组或者布尔值
 var a = [97,7,8,"17"];
 a.toString();
 //"97,7,8,17"
