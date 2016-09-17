@@ -1,13 +1,13 @@
 {
   "name": "lesson_6",
   "version": "1.0.0",
-  "description": "lesson_6",
+  "description": "node_homework",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "lesson"
+    "node.js"
   ],
   "author": "onion",
   "license": "ISC",
