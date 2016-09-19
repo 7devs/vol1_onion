@@ -6,7 +6,7 @@ app.use(bodyParser.urlencoded({
     extended: false
 }));
 
-app.use('/users',require('./lib/routers/users'));
+app.use('/user',require('./lib/routers/users'));
 
 app.use('/*',function(req,res,next){
     res.status(404).send('Not Found')
