@@ -3,10 +3,8 @@ var router = require('express').Router();
 
 router.route('/')
     .get(function(req,res,next){
-        res.status(200).send(usersModel)
+        res.status(200).send(usersModel);
     });
-
-
 
 router.route('/count/:sex')
     .get(function(req,res,next){
@@ -52,24 +50,24 @@ router.route('/search')
     });
 
 router.route('/:id')
-    .get(function(req,res,next){
-        var id = parseInt(req.params.id) - 1;
-            users = usersModel[id];
-        if(users){
-            res.status(200).send(users['firstName'] + ' ' + users['lastName']);
+    .put(function(req,res,next){
+        var index = parseInt(req.params.id) - 1;
+        users = usersModel[index];
+        users.age = req.body.age;
+        //users.age = changeage;
+        if(index > 0 && index < usersModel.length){   //有疑问的地方
+            res.status(200).send(users);
         }else{
             res.status(404).send('Not Found');
         };
     });
 
 router.route('/:id')
-    .put(function(req,res,next){
+    .get(function(req,res,next){
         var id = parseInt(req.params.id) - 1;
-        users = usersModel[id];
-        age = req.body.age;
-        users.age = age;
-        if(Math.round(age) === parseInt(age) && x>0){
-            res.status(200).send(users);
+            users = usersModel[id];
+        if(users){
+            res.status(200).send(users['firstName'] + ' ' + users['lastName']);
         }else{
             res.status(404).send('Not Found');
         };

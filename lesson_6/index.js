@@ -8,6 +8,8 @@ app.use(bodyParser.urlencoded({
 
 app.use('/user',require('./lib/routers/users'));
 
+app.use('/album',require('./lib/routers/albums'));
+
 app.use('/*',function(req,res,next){
     res.status(404).send('Not Found')
 });
